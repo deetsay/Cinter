@@ -1,7 +1,7 @@
 
 Cinter is a software synthesizer designed for use in Amiga 4k intros.
 
-This unformotably amateurish fork adds "JIT compiling" on the Amiga side to
+This uncomfortably amateurish fork adds "JIT compiling" on the Amiga side to
 make the instrument creation faster (~30%, depends a lot on how exotic your
 parameters are). Check player/Cinter4JIT_example.S after you've mastered the
 normal version, maybe you'll get the idea!

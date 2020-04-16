@@ -1,13 +1,22 @@
 
 Cinter is a software synthesizer designed for use in Amiga 4k intros.
 
+This unformotably amateurish fork adds "JIT compiling" on the Amiga side to
+make the instrument creation faster (~30%, depends a lot on how exotic your
+parameters are). Check player/Cinter4JIT_example.S after you've mastered the
+normal version, maybe you'll get the idea!
+
+The end of player/Cinter4JIT.S contains optimizations for cases where a
+parameter is 0, 1 or -1 (mulus are replaced with faster code). You could add
+more, for example if you found that your tune uses parameter value 3 a lot...
+
 The synth has three conponents:
 - A VST instrument for creating sounds
 - A script for converting music
 - Replay code for inclusion in your intro
 
 You will need:
-- A Windows computer (or a way to use Windows VSTs)
+- A computer with a way to use Windows VSTs
 - A suitable VST host
 - Protracker, or a compatible tracker
 - Python 2.x, where x >= 5
